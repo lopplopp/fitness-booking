@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Emily",
+      "lastName": "Johnson",
+      "gender": "female",
+      "email": "emily.johnson@x.dummyjson.com",
+      "username": "emilys",
+      "password": "emilyspass",
+      "birthDate": "1996-5-30",
+      "classes": {
+        "1": {
+          "name"      : "Boxing"   ,
+          "duration"  : "60 mins"  ,
+          "date"      : "Tue 14:00",
+          "instructor": "Matt Lee" ,
+          "image"     : "boxingImg",
+          "id" : "1"
+        },
+        "2": {
+          "name"      : "Crossfit"   ,
+          "duration"  : "60 mins"    ,
+          "date"      : "Wed 16:00"  ,
+          "instructor": "Matt Lee"   ,
+          "image"     : "crossfitImg",
+          "id" : "2"
+
+        },
+        "3": {
+          "name"      : "Yoga"     ,
+          "duration"  : "60 mins"  ,
+          "date"      : "Fri 10:00",
+          "instructor": "Matt Lee" ,
+          "image"     : "yogaImg",
+          "id" : "3"
+
+        }
+      }
+    },
+    {
+      "id": 2,
+      "firstName": "Michael",
+      "lastName": "Williams",
+      "gender": "male",
+      "email": "michael.williams@x.dummyjson.com",
+      "username": "michaelw",
+      "password": "michaelwpass",
+      "birthDate": "1996-5-30",
+      "classes": {
+        "1": {
+          "name"      : "Boxing"   ,
+          "duration"  : "60 mins"  ,
+          "date"      : "Tue 14:00",
+          "instructor": "Matt Lee" ,
+          "image"     : "boxingImg",
+          "id" : "1"
+        },
+        "2": {
+          "name"      : "Crossfit"   ,
+          "duration"  : "60 mins"    ,
+          "date"      : "Wed 16:00"  ,
+          "instructor": "Matt Lee"   ,
+          "image"     : "crossfitImg",
+          "id" : "2"
+
+        },
+        "3": {
+          "name"      : "Yoga"     ,
+          "duration"  : "60 mins"  ,
+          "date"      : "Fri 10:00",
+          "instructor": "Matt Lee" ,
+          "image"     : "yogaImg",
+          "id" : "3"
+
+        }
+      }
+    }
+  ],
+  "total": 2,
+  "skip": 0,
+  "limit": 30
+}
