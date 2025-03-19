@@ -1,4 +1,8 @@
 import { createContext, useEffect, useRef, useState } from "react";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
+
 
 export const GlobalContext = createContext(null);
 
@@ -10,10 +14,12 @@ export default function GlobalState({ children }) {
   const checkFirstRender = useRef(true);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
   const [attemptLogin, setAttemptLogin] = useState();
   const [classes, setClasses] = useState([]);
   const [login, setLogin] = useState(false);
+  const navigate = useNavigate();
+
 
   async function fetchLoginInfo() {
     try {
@@ -29,6 +35,7 @@ export default function GlobalState({ children }) {
       const json = await response.json();
       if (json.message) {
         setError(json.message);
+        toast.warning(json.message);
       } else {
         const response = await import("../files/fitness-json.json");
         const users = response.users;
@@ -38,6 +45,7 @@ export default function GlobalState({ children }) {
           }
         });
         setLogin(true);
+        navigate(`/${userName}`);
       }
     } catch (error) {
       setError(error);

@@ -1,6 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { toast } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/context";
 
 export default function Login() {
@@ -10,22 +10,12 @@ export default function Login() {
     setUserName,
     password,
     setPassword,
-    error,
-    setError,
   } = useContext(GlobalContext);
-  const navigate = useNavigate();
-
 
   function handleSubmit(e) {
     e.preventDefault();
     if (userNameValidation() && passwordValidation()) {
       setAttemptLogin(true);
-      if (error != null) {
-        toast.warning(error);
-        setError(null);
-      } else {
-        navigate(`/${userName}`);
-      }
     }
   }
 
