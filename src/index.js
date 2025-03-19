@@ -9,7 +9,7 @@ import GlobalState from "./context/context.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/fitness-booking">
     <React.StrictMode>
       <GlobalState>
         <App />
