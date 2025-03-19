@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Steps to run the app
+
+1. unzip the file
+2. Check if npm is install on your PC, if not, download npm with your choice of method
+3. run "npm install" with the command window
+4. run "npm start" to start the app
+
 ## Available Scripts
 
 In the project directory, you can run:

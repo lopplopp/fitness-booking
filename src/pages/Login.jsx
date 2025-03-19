@@ -15,6 +15,7 @@ export default function Login() {
   } = useContext(GlobalContext);
   const navigate = useNavigate();
 
+
   function handleSubmit(e) {
     e.preventDefault();
     if (userNameValidation() && passwordValidation()) {

@@ -52,7 +52,11 @@ export default function Personal() {
               Currently, there are no classes
             </p>
           </div>
-        ) : (
+        ) : 
+        
+        // iterate classes object and display each class in a card form
+
+        (
           <div className="w-full flex flex-col items-center md:flex md:flex-wrap md:flex-row md:justify-center md:gap-8 ">
             {Object.entries(classes).map(([key, subject]) => (
               <div

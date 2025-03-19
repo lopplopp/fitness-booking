@@ -7,6 +7,9 @@ export default function Home() {
   const { login, classes, setClasses } = useContext(GlobalContext);
   const [loading, setLoading] = useState(true);
 
+  //Getting all the datas needed with querySelector and put it into a single object
+  //add object into classes object and set new state with setClasses 
+
   function handleAddBooking(e) {
     let parent = e.target.parentNode;
     let id = parent.id;
@@ -74,6 +77,10 @@ export default function Home() {
                 Book a class with us now
               </h1>
               <div className="w-full flex flex-col items-center md:flex md:flex-wrap md:flex-row md:justify-center md:gap-8 ">
+              
+
+              {/* Classes available to book */}
+                
                 <div
                   id="5"
                   className="flex flex-col items-center w-2/3 border border-black h-[450px] my-8 md:w-1/4 bg-white text-black"

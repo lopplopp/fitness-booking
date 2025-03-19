@@ -37,7 +37,7 @@ export default function Header({ toggleDark, mode }) {
         }
       >
         <div className="flex justify-between items-center">
-          <Link to={"/"}>
+          <Link to={"/"} onClick={() => {setOpenNav(false)}}>
             <h2 className="font-bold text-2xl">Fitness Booking</h2>
           </Link>
 
@@ -122,19 +122,38 @@ export default function Header({ toggleDark, mode }) {
         </div>
 
         {openNav ? (
-          <div className="text-lg w-1/2 absolute right-2 ">
+          <div className="text-lg w-1/3 absolute right-2 ">
             <Link to={"/"} onClick={() => setOpenNav(!openNav)}>
               {" "}
-              <div className="my-2 py-2 px-2 rounded-md  hover:bg-gray-700 transition-all duration-200">
+              <div className="my-2 py-2 px-2 bg-gray-200 dark:bg-gray-400 rounded-md  hover:bg-gray-700 transition-all duration-200">
                 Home
               </div>
             </Link>
 
-            <Link to={"/login"} onClick={() => setOpenNav(!openNav)}>
-              <div className="my-2 py-2 px-2 rounded-md  hover:bg-gray-700 transition-all duration-200">
-                Login
-              </div>
-            </Link>
+            {login ? (
+              <Link to={`/${userName}`} onClick={() => setOpenNav(false)}>
+                <div className="my-2 py-2 px-2 bg-gray-200 dark:bg-gray-400 rounded-md  hover:bg-gray-700 transition-all duration-200">
+                  My class
+                </div>
+              </Link>
+            ) : null}
+
+            {login ? (
+              <Link to={"/"} onClick={() => setOpenNav(false)}>
+                <div
+                  onClick={handleLogout}
+                  className="my-2 py-2 px-2 bg-gray-200 dark:bg-gray-400 rounded-md  hover:bg-gray-700 transition-all duration-200"
+                >
+                  Logout
+                </div>
+              </Link>
+            ) : (
+              <Link to={"/login"} onClick={() => setOpenNav(false)}>
+                <div className="my-2 py-2 px-2 bg-gray-200 dark:bg-gray-400 rounded-md  hover:bg-gray-700 transition-all duration-200">
+                  Login
+                </div>
+              </Link>
+            )}
           </div>
         ) : null}
       </div>
