@@ -9,6 +9,12 @@ Steps to run the app
 3. run "npm install" with the command window
 4. run "npm start" to start the app
 
+two login account that can login successful are
+1. acc: emilys pw: emilyspass
+2. acc: michaelw pw: michaelwpass
+
+Both their information are store in a static json file.
+
 ## Available Scripts
 
 In the project directory, you can run:
